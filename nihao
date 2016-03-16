@@ -117,6 +117,17 @@
             clear: left;
           }
     }
+    .no{
+        width: 150px;
+        height: 200px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        box-shadow: 3px 3px 2px #F0F0F0;
+        
+    }
+    
+    
 </style>
 <body>
 <div id="wrap">
@@ -195,7 +206,8 @@
 				<li><a href="#">GH</a></li>
 			</ul>
 		</div>
-
+        <div class="no"></div>
+        
 	</div>
     <img class="img1" src="img/2.jpg">  
     <img class="img2" src="img/3.jpg">
