@@ -12,9 +12,7 @@
     }
     p{
         font-size: 13px;
-        
     }
-    
     a{
         text-decoration: none;
         font-family:Arial,Verdana,Sans-serif; 
@@ -31,8 +29,7 @@
     ul{
         list-style-type: none;
     }
-    .img1{
-
+    /*.img1{
         position: absolute;
         left: 0;
         top: 0;
@@ -44,9 +41,11 @@
         right: 0;
         bottom: 0; 
         z-index: -1;
-    }
-    #wrap{
+    }*/
+    .wrap{
         position: relative;
+        background: url("img/2.jpg") no-repeat left top/500px 300px,
+                    url("img/3.jpg") no-repeat right bottom/500px 300px;
     }
     .content{
         margin-left: 100px;
@@ -56,7 +55,7 @@
         margin-top: 20px;
         margin-bottom: 20px;
         position: relative;
-        border-right: 1px;
+        z-index: 2;
         /*border-right-style: solid;*/
         /*border-image: linear gradient(to top bottom,white,black)1px 1px ;*/    
     }
@@ -67,6 +66,7 @@
         height: 80px;
         position: absolute;
     }
+
     .zen{
         left: 0;
         top:0;
@@ -93,7 +93,7 @@
          padding-left: 20px;
          display: inline;
     }
-    #nav{
+    .nav{
         border-radius: 5px;
         padding:20px 0 20px 0 ; 
         position: absolute;
@@ -101,67 +101,58 @@
         margin-top: 100px;
         background:url("img/5.jpg") no-repeat;
     }
-    #nav ul{
+    .nav ul{
         font-size: .7em;
         width: 100px;
     }
-    #nav ul li{
+    .nav ul li{
         padding-top: 12px;
         padding-left: 5px;
     }
-    #nav ul li a{
+    .nav ul li a{
         color: #c4c400;
         text-decoration: none;
     }
-    #nav ul li a:hover{
+    .nav ul li a:hover{
         text-decoration: underline;
     }
     @media screen and (max-width:550px){
-          #nav{display: none;}
+          .nav{display: none;}
           .text{
             clear: left;
           }
     }
-    #nav .nav-text{
+    .nav .nav-text{
         font-size: 18px;
     }
-    #nav ul:first-child{
+    .nav ul:first-child{
         padding-top: 17px; 
     }
-    
-    #nav ul > li:nth-child(3){
+    .nav ul > li:nth-child(3){
         padding-top: 37px;
-
     }
-    #nav ul > li:nth-child(4){
+    .nav ul > li:nth-child(4){
         padding-top: 43px;
-
     }
-    #nav ul > li:nth-child(5){
+    .nav ul > li:nth-child(5){
         padding-top: 10px;
-
     }
-    #nav ul > li:nth-child(6){
+    .nav ul > li:nth-child(6){
         padding-top: 0px;
-
     }
-    #nav ul > li:nth-child(7){
+    .nav ul > li:nth-child(7){
         padding-top: 5px;
-
     }
-    #nav ul > li:nth-child(8){
+    .nav ul > li:nth-child(8){
         padding-top: 8px;
-
     }
-    #nav ul > li:nth-child(9){
+    .nav ul > li:nth-child(9){
         padding-top: 41px;
-
     }
-    #nav ul > li:nth-child(10){
+    .nav ul > li:nth-child(10){
         padding-top: 0px;
-
     }
-    #nav ul > li:nth-child(11){
+    .nav ul > li:nth-child(11){
         padding-top: 14px;
     }
     /*.no{
@@ -174,6 +165,7 @@
     }*/
     .content::before{
         content: "";
+        display: block;
         width: 200px;
         height: 200px;
         position: absolute;
@@ -183,21 +175,25 @@
     }
     .content::after{
         content: "";
+        display: block;
         width: 200px;
         height: 200px;
         position: absolute;
+        z-index: -1;
         right: 2px;
         bottom: 2px;
         box-shadow: 2px 2px 2px #ccc;
     }
-    
+    .text-one{
+        margin-top: 20px;
+    }
     
 </style>
 </head>
 
 <body>
-<div id="wrap">
-	<div id="nav">
+<div class="wrap">
+	<div class="nav">
 			<ul>
 			    <li class="nav-text">Design:</li>
 				<li><a href="http://www.baidu.com">Mid Century Modern by Andrew Lohman </a></li>
@@ -231,35 +227,35 @@
 	    <div class="text">
 			<h2>The Road to Enlightenment</h2>
 			<p>Littering a dark and dreary road lay the past relics of browser-specific tags, incompatible DOMs, broken CSS support, and abandoned browsers.</p>
-            <br>
-            <p>We must clear the mind of the past. Web enlightenment has been achieved thanks to the tireless efforts of folk like the W3C, WaSP, and the major browser creators.</p>
-            <br>
-            <p>The CSS Zen Garden invites you to relax and meditate on the important lessons of the masters. Begin to see with clarity. Learn to use the time-honored techniques in new and invigorating fashion. Become one with the web.
+            
+            <p class="text-one">We must clear the mind of the past. Web enlightenment has been achieved thanks to the tireless efforts of folk like the W3C, WaSP, and the major browser creators.</p>
+            
+            <p class="text-one">The CSS Zen Garden invites you to relax and meditate on the important lessons of the masters. Begin to see with clarity. Learn to use the time-honored techniques in new and invigorating fashion. Become one with the web.
             </p>
-            <br>
-            <h2>So What is This About?</h2>
+            
+            <h2 class="text-one">So What is This About?</h2>
             <p>There is a continuing need to show the power of CSS. The Zen Garden aims to excite, inspire, and encourage participation. To begin, view some of the existing designs in the list. Clicking on any one will load the style sheet into this very page. The HTML remains the same, the only thing that has changed is the external CSS file. Yes, really.</p>
-            <br>
-            <p>CSS allows complete and total control over the style of a hypertext document. The only way this can be illustrated in a way that gets people excited is by demonstrating what it can truly be, once the reins are placed in the hands of those able to create beauty from structure. Designers and coders alike have contributed to the beauty of the web; we can always push it further.</p>
-            <br>
-            <h2>Participation</h2>
+            
+            <p class="text-one">CSS allows complete and total control over the style of a hypertext document. The only way this can be illustrated in a way that gets people excited is by demonstrating what it can truly be, once the reins are placed in the hands of those able to create beauty from structure. Designers and coders alike have contributed to the beauty of the web; we can always push it further.</p>
+            
+            <h2 class="text-one">Participation</h2>
             <p>Strong visual design has always been our focus. You are modifying this page, so strong CSS skills are necessary too, but the example files are commented well enough that even CSS novices can use them as starting points. Please see the CSS Resource Guide for advanced tutorials and tips on working with CSS.You may modify the style sheet in any way you wish, but not the HTML. This may seem daunting at first if you’ve never worked this way before, but follow the listed links to learn more, and use the sample files as a guide.</p>
-            <br>
-            <p>Download the sample <a href="#">HTML</a> and <a href="#">CSS</a> to work on a copy locally. Once you have completed your masterpiece (and please, don’t submit half-finished work) upload your CSS file to a web server under your control. <a href="#">Send us a link</a> to an archive of that file and all associated assets, and if we choose to use it we will download it and place it on our server.</p>
-            <br>
-            <h2>Benefits</h2>
+            
+            <p class="text-one">Download the sample <a href="#">HTML</a> and <a href="#">CSS</a> to work on a copy locally. Once you have completed your masterpiece (and please, don’t submit half-finished work) upload your CSS file to a web server under your control. <a href="#">Send us a link</a> to an archive of that file and all associated assets, and if we choose to use it we will download it and place it on our server.</p>
+            
+            <h2 class="text-one">Benefits</h2>
             <p>Why participate? For recognition, inspiration, and a resource we can all refer to showing people how amazing CSS really can be. This site serves as equal parts inspiration for those working on the web today, learning tool for those who will be tomorrow, and gallery of future techniques we can all look forward to.</p>
-            <br>
-            <h2>Requirements</h2>
+            
+            <h2 class="text-one">Requirements</h2>
             <p>Where possible, we would like to see mostly CSS 1 & 2 usage. CSS 3 & 4 should be limited to widely-supported elements only, or strong fallbacks should be provided. The CSS Zen Garden is about functional, practical CSS and not the latest bleeding-edge tricks viewable by 2% of the browsing public. The only real requirement we have is that your CSS validates.</p>
-            <br>
-            <p>Luckily, designing this way shows how well various browsers have implemented CSS by now. When sticking to the guidelines you should see fairly consistent results across most modern browsers. Due to the sheer number of user agents on the web these days — especially when you factor in mobile — pixel-perfect layouts may not be possible across every platform. That’s okay, but do test in as many as you can. Your design should work in at least IE9+ and the latest Chrome, Firefox, iOS and Android browsers (run by over 90% of the population).</p>
-            <br>
-            <p>We ask that you submit original artwork. Please respect copyright laws. Please keep objectionable material to a minimum, and try to incorporate unique and interesting visual themes to your work. We’re well past the point of needing another garden-related design.</p>
-            <br>
-            <p>This is a learning exercise as well as a demonstration. You retain full copyright on your graphics (with limited exceptions, see submission guidelines), but we ask you release your CSS under a Creative Commons license identical to the <a href="#">one on this site</a> so that others may learn from your work.</p>
-            <br>
-            <p>By Dave Shea. Bandwidth graciously donated by <a href="#">mediatemple</a>. Now available: <a href="#">Zen Garden, the book.</a></p>
+            
+            <p class="text-one">Luckily, designing this way shows how well various browsers have implemented CSS by now. When sticking to the guidelines you should see fairly consistent results across most modern browsers. Due to the sheer number of user agents on the web these days — especially when you factor in mobile — pixel-perfect layouts may not be possible across every platform. That’s okay, but do test in as many as you can. Your design should work in at least IE9+ and the latest Chrome, Firefox, iOS and Android browsers (run by over 90% of the population).</p>
+            
+            <p class="text-one">We ask that you submit original artwork. Please respect copyright laws. Please keep objectionable material to a minimum, and try to incorporate unique and interesting visual themes to your work. We’re well past the point of needing another garden-related design.</p>
+            
+            <p class="text-one">This is a learning exercise as well as a demonstration. You retain full copyright on your graphics (with limited exceptions, see submission guidelines), but we ask you release your CSS under a Creative Commons license identical to the <a href="#">one on this site</a> so that others may learn from your work.</p>
+            
+            <p class="text-one">By Dave Shea. Bandwidth graciously donated by <a href="#">mediatemple</a>. Now available: <a href="#">Zen Garden, the book.</a></p>
 
 		</div>
 		
@@ -275,8 +271,8 @@
         <!-- <div class="no"></div> -->
         
 	</div>
-    <img class="img1" src="img/2.jpg">  
-    <img class="img2" src="img/3.jpg">
+    <!-- <img class="img1" src="img/2.jpg">  
+    <img class="img2" src="img/3.jpg">  -->
 </div>
 </body>
 </html>
