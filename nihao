@@ -57,6 +57,7 @@
         margin-bottom: 20px;
         position: relative;
         border-right: 1px;
+        border-radius: 10px;
         /*border-right-style: solid;*/
         /*border-image: linear gradient(to top bottom,white,black)1px 1px ;*/    
     }
@@ -94,7 +95,7 @@
          display: inline;
     }
     #nav{
-
+        border-radius: 5px;
         padding:20px 0 20px 0 ; 
         position: absolute;
         right: 0;
