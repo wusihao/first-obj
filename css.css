@@ -66,6 +66,7 @@
         color: #d3d1c6; 
     }
     .sidebar{
+        /*border: 1px solid red;*/
         width: 150px;
         height: 280px;
         padding:30px 7px 10px 2px ; 
@@ -74,9 +75,30 @@
         line-height: 1.4em;
         font-style: italic;
     }
+    .sidebar::before{
+        content: "";
+        height: 600px;
+        width: 2px;
+        position: absolute;
+
+        left: 0;
+        top: 0;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(255,255,255,1) 100%);
+
+    }
     .footer{
         padding-top: 30px;
         text-align: center;
+    }
+    .footer::after{
+        content: "";
+        height: 600px;
+        width: 2px;
+        position: absolute;
+        
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(to top, rgba(0,0,0,0.1) 0%,rgba(255,255,255,1) 100%);
     }
     .footer ul li {
          padding-left: 20px;
@@ -155,23 +177,26 @@
     .content::before{
         content: "";
         display: block;
-        width: 200px;
-        height: 200px;
+        width: 400px;
+        height: 1px;
         position: absolute;
-        top: 2px;
-        left: 0px;
-        box-shadow: -2px -2px 2px #ccc;
+        top: 0;
+        left: 0;
+        /*box-shadow: -2px -2px 2px #ccc;*/
+        background-image: linear-gradient(to right, rgba(0,0,0,0.1) 0%,rgba(255,255,255,1) 100%);
+
     }
     .content::after{
         content: "";
         display: block;
-        width: 200px;
-        height: 200px;
+        width: 400px;
+        height: 1px;
         position: absolute;
         z-index: -1;
-        right: 2px;
-        bottom: 2px;
-        box-shadow: 3px 2px 2px #ccc;
+        right: 0;
+        bottom: 0;
+        /*box-shadow: 3px 2px 2px #ccc;*/
+        background-image: linear-gradient(to left, rgba(0,0,0,0.1) 0%,rgba(255,255,255,1) 100%);
     }
     .text-one{
         margin-top: 20px;
