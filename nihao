@@ -8,7 +8,8 @@
     h2,.mindart{
         font-family:"Times New Roman",Georgia,Serif,Arial,Verdana,Sans-serif;
         font-style: italic;
-        color: #A5A552;
+        color: #c1bb9c;
+        font-size: 16px;
     }
     p{
         font-size: 13px;
@@ -16,36 +17,25 @@
     a{
         text-decoration: none;
         font-family:Arial,Verdana,Sans-serif; 
-        color: #2A8EC2;
+        color: #b7a5df;
         font-weight: bold;
     }
     .content a:hover{
         text-decoration: underline;
-        color: #FF359A;
+        color: #9685ba;
     }
     a:visited{
-        color: black;
+        color: #d4cddc;
     }
     ul{
         list-style-type: none;
     }
-    /*.img1{
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: -1;
-    }
-    .img2{
-        width: 400px;
-        position:absolute;
-        right: 0;
-        bottom: 0; 
-        z-index: -1;
-    }*/
+
     .wrap{
-        position: relative;
-        background: url("img/2.jpg") no-repeat left top/500px 300px,
-                    url("img/3.jpg") no-repeat right bottom/500px 300px;
+
+        background: url("img/2.jpg") no-repeat left top/350px 250px,
+                    url("img/3.jpg") no-repeat right bottom/450px 250px,
+                    url("img/8.jpg") no-repeat right 25px/100px 80px;
     }
     .content{
         margin-left: 100px;
@@ -56,8 +46,7 @@
         margin-bottom: 20px;
         position: relative;
         z-index: 2;
-        /*border-right-style: solid;*/
-        /*border-image: linear gradient(to top bottom,white,black)1px 1px ;*/    
+        /*border:1px solid linear-gradient(to bottom,white,black) ; */  
     }
     .mindart{
         font-weight: bolder;
@@ -66,7 +55,6 @@
         height: 80px;
         position: absolute;
     }
-
     .zen{
         left: 0;
         top:0;
@@ -76,13 +64,20 @@
         left: 80px;
         top: 60px;   
     }
+    .right-top-text{
+        position: absolute;
+        right: 20px;
+        top: 50px;
+        font-size: 15px;
+        color: #d3d1c6; 
+    }
     .sidebar{
         width: 150px;
         height: 280px;
         padding:30px 7px 10px 2px ; 
         float: left;
         text-align: center;
-        line-height: 1.5em;
+        line-height: 1.4em;
         font-style: italic;
     }
     .footer{
@@ -99,22 +94,39 @@
         position: absolute;
         right: 0;
         margin-top: 100px;
-        background:url("img/5.jpg") no-repeat;
+        background: #e0dec7;
     }
     .nav ul{
         font-size: .7em;
         width: 100px;
     }
-    .nav ul li{
-        padding-top: 12px;
+    .nav li{
+        position: relative;
+        color: #c2bb9a;
+        padding-top: 7px;
         padding-left: 5px;
+        padding-bottom: 7px;
     }
-    .nav ul li a{
-        color: #c4c400;
+    .nav li a{
+        color: #988f5e;
         text-decoration: none;
     }
-    .nav ul li a:hover{
+    .nav li a:hover{
         text-decoration: underline;
+    }
+    .nav li::after{
+        content: "";
+        height: 1px;
+        background:#d7cfb7;
+        position: absolute;
+        bottom: 0;
+        right: 12px;
+        left: 12px;
+        margin-top: 17px;
+    }
+    .nav .nav-text{
+        font-size: 15px;
+        text-shadow: -1px -1px white;
     }
     @media screen and (max-width:550px){
           .nav{display: none;}
@@ -122,38 +134,21 @@
             clear: left;
           }
     }
-    .nav .nav-text{
-        font-size: 18px;
+    .nav ul > li:nth-child(4)::after{
+        width: 0;
+        height: 0;
     }
-    .nav ul:first-child{
-        padding-top: 17px; 
+    .nav ul > li:nth-child(6)::after{
+        width: 0;
+        height: 0;
     }
-    .nav ul > li:nth-child(3){
-        padding-top: 37px;
+    .nav ul > li:nth-child(10)::after{
+        width: 0;
+        height: 0;
     }
-    .nav ul > li:nth-child(4){
-        padding-top: 43px;
-    }
-    .nav ul > li:nth-child(5){
-        padding-top: 10px;
-    }
-    .nav ul > li:nth-child(6){
-        padding-top: 0px;
-    }
-    .nav ul > li:nth-child(7){
-        padding-top: 5px;
-    }
-    .nav ul > li:nth-child(8){
-        padding-top: 8px;
-    }
-    .nav ul > li:nth-child(9){
-        padding-top: 41px;
-    }
-    .nav ul > li:nth-child(10){
-        padding-top: 0px;
-    }
-    .nav ul > li:nth-child(11){
-        padding-top: 14px;
+    .nav ul > li:nth-child(12)::after{
+        width: 0;
+        height: 0;
     }
     /*.no{
         width: 150px;
@@ -170,7 +165,7 @@
         height: 200px;
         position: absolute;
         top: 2px;
-        left: 2px;
+        left: 0px;
         box-shadow: -2px -2px 2px #ccc;
     }
     .content::after{
@@ -182,12 +177,22 @@
         z-index: -1;
         right: 2px;
         bottom: 2px;
-        box-shadow: 2px 2px 2px #ccc;
+        box-shadow: 3px 2px 2px #ccc;
     }
     .text-one{
         margin-top: 20px;
     }
-    
+    .left-top-text{
+        position: absolute;
+        top: 2px;
+        left: 10px;
+        width: 30px;
+        border: 2px solid #a39d91;
+        color: #a39d9a;
+        padding: 3px;
+        text-align: center;
+        background-image: linear-gradient(to bottom,#eff2dd,#bfb9a5)
+    }
 </style>
 </head>
 
@@ -204,7 +209,7 @@
 				<li class="nav-text">Carlson:</li>
 				<li><a href="#">A Robot Named Jimmy by meltmedia </a></li>
                 <li class="nav-text">Archive:</li>
-				<li>Verde Moderna by Dave Shea </li>
+				<li><a href="#">Verde Moderna by Dave Shea</a></li>
                 <li><a href="#">Next Designs › </a></li>
 				
 				<li><a href="#">view all designs</a></li>
@@ -216,6 +221,7 @@
 	<div class="content">
 	    <div class="mindart zen">Zen </div>
         <div class="mindart garden">Garden </div>
+        <div class="right-top-text">The Beauty Of CSS Design</div>
 	    <div class="sidebar">
 			<p>A demonstration of what can be accomplished </p>
 			<br>
@@ -271,8 +277,9 @@
         <!-- <div class="no"></div> -->
         
 	</div>
-    <!-- <img class="img1" src="img/2.jpg">  
-    <img class="img2" src="img/3.jpg">  -->
+    <div class="left-top-text">
+        元完全杂技
+    </div>
 </div>
 </body>
 </html>
