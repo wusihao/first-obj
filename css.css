@@ -1,214 +1,272 @@
 *{margin: 0;padding: 0;}
-    h2,.mindart{
-        font-family:"Times New Roman",Georgia,Serif,Arial,Verdana,Sans-serif;
-        font-style: italic;
-        color: #c1bb9c;
-        font-size: 16px;
-    }
-    p{
-        font-size: 13px;
-    }
-    a{
-        text-decoration: none;
-        font-family:Arial,Verdana,Sans-serif; 
-        color: #b7a5df;
-        font-weight: bold;
-    }
-    .content a:hover{
-        text-decoration: underline;
-        color: #9685ba;
-    }
-    a:visited{
-        color: #d4cddc;
-    }
-    ul{
-        list-style-type: none;
+
+h2 {
+    font-family:"Times New Roman",Georgia,Serif,Arial,Verdana,Sans-serif;
+    font-style: italic;
+    color: #c1bb9c;
+}
+
+h2 {
+    font-size: 17px;
+    color: #7d775c;
+}
+
+span {
+    margin-left: 3px;
+    color: black;
+}
+
+p {
+     font-size: 13px;
+}
+
+.page-content-main p {
+    line-height: 1.4em;
+}
+
+a {
+    font-family:Arial,Verdana,Sans-serif; 
+    font-weight: bold;
+    color: #b7a5df;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9685ba;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #d4cddc;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.page {
+    padding-bottom: 9px;
+    background: url("img/2.jpg") no-repeat left top/350px 250px,
+                url("img/3.jpg") no-repeat right bottom/450px 250px,
+                url("img/8.jpg") no-repeat right 25px/150px 130px;
+}
+
+.page-content {
+    position: relative;
+    z-index: 2;
+    margin: 8px 144px 12px 100px;
+    padding:120px 20px 0px 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(125deg,#e0e0e0,transparent,transparent,transparent,transparent,#e0e0e0) 1 1 1 1;
+    background-color: rgba(255,255,255,.7);
+}
+
+.page-content-description {
+    float: left;
+    width: 162px;
+    height: 244px;
+    margin: 16px 17px 20px 4px;
+    font-style: italic;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.page-content-footer {
+    padding-top: 20px;
+    padding-bottom:15px; 
+    text-align: center;
+}
+
+/*
+.page-content-footer::after，
+.page-content-footer::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.page-content-footer::after {
+    height: 650px;
+    width: 1px;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.1) 0%,rgba(255,255,255,1) 100%);
+}
+
+.page-content-footer::before {
+    width: 450px;
+    height: 1px;
+    background-image: linear-gradient(to left, rgba(0,0,0,0.1) 0%,rgba(255,255,255,1) 100%);
+}*/
+
+.page-content-footer ul li {
+    display: inline;
+    padding-left: 20px;
+}
+
+.page-aside {
+    position: absolute;
+    right: 0;
+    width: 135px;
+    padding: 15px 0px 20px 5px; 
+    margin-right: 4px;
+    margin-top: 150px;
+    background: #e0dec7;
+}
+
+.page-aside li {
+    position: relative;
+    padding: 7px 1px;
+    font-size: 10px; 
+    color: #c2bb9a;
+}
+
+.page-aside li a {
+    color: #988f5e;
+    text-decoration: none;
+}
+
+.page-aside li a:hover {
+    text-decoration: underline;
+}
+
+.page-aside li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 7px;
+    left: 7px;
+    height: 1px;
+    background:linear-gradient(to right,transparent,#d7cfb7,#b6ceb6,#b6ceb6,#b6ceb6,#b6ceb6,#b6ceb6,#b6ceb6,#b6ceb6,#d7cfb7,transparent);
     }
 
-    .wrap{
+.page-aside .page-aside-title {
+    margin-top: 10px;
+    font-size: 15px;
+    text-shadow: -1px -1px white;
+    }
 
+@media screen and (max-width: 650px) {
+    .page-content-main {
+        clear: left;
+    }
+
+    .page {
         background: url("img/2.jpg") no-repeat left top/350px 250px,
-                    url("img/3.jpg") no-repeat right bottom/450px 250px,
-                    url("img/8.jpg") no-repeat right 25px/100px 80px;
+                    url("img/3.jpg") no-repeat right bottom/450px 250px;
     }
-    .content{
-        margin-left: 100px;
-        margin-right:100px;
-        background-color: rgba(255,255,255,.7);
-        padding:120px 10px 50px 10px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        position: relative;
-        z-index: 2;
-        /*border:1px solid linear-gradient(to bottom,white,black) ; */  
-    }
-    .mindart{
-        font-weight: bolder;
-        font-size: 45px;
-        width: 300px;
-        height: 80px;
-        position: absolute;
-    }
-    .zen{
-        left: 0;
-        top:0;
-        padding: 15px 0px 0px 15px; 
-    }
-    .garden{
-        left: 80px;
-        top: 60px;   
-    }
-    .right-top-text{
-        position: absolute;
-        right: 20px;
-        top: 50px;
-        font-size: 15px;
-        color: #d3d1c6; 
-    }
-    .sidebar{
-        /*border: 1px solid red;*/
-        width: 150px;
-        height: 280px;
-        padding:30px 7px 10px 2px ; 
-        float: left;
-        text-align: center;
-        line-height: 1.4em;
-        font-style: italic;
-    }
-    .sidebar::before{
-        content: "";
-        height: 600px;
-        width: 2px;
-        position: absolute;
 
-        left: 0;
+    .page-content {
+        margin: 8px 14px 12px 53px;
+    }
+
+    .page-aside {
+        position: absolute;
+        right: 0;
         top: 0;
-        background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(255,255,255,1) 100%);
-
+        z-index: 10;
+        width: 200px;
+        height: 260px;
+        padding: 0;
     }
-    .footer{
-        padding-top: 30px;
+
+    .page-aside li {
+        padding: 0;
+        margin: 0;
         text-align: center;
     }
-    .footer::after{
-        content: "";
-        height: 600px;
-        width: 2px;
-        position: absolute;
-        
-        right: 0;
-        bottom: 0;
-        background-image: linear-gradient(to top, rgba(0,0,0,0.1) 0%,rgba(255,255,255,1) 100%);
-    }
-    .footer ul li {
-         padding-left: 20px;
-         display: inline;
-    }
-    .nav{
-        border-radius: 5px;
-        padding:20px 0 20px 0 ; 
-        position: absolute;
-        right: 0;
-        margin-top: 100px;
-        background: #e0dec7;
-    }
-    .nav ul{
-        font-size: .7em;
-        width: 100px;
-    }
-    .nav li{
-        position: relative;
-        color: #c2bb9a;
-        padding-top: 7px;
-        padding-left: 5px;
-        padding-bottom: 7px;
-    }
-    .nav li a{
-        color: #988f5e;
-        text-decoration: none;
-    }
-    .nav li a:hover{
-        text-decoration: underline;
-    }
-    .nav li::after{
-        content: "";
-        height: 1px;
-        background:#d7cfb7;
-        position: absolute;
-        bottom: 0;
-        right: 12px;
-        left: 12px;
-        margin-top: 17px;
-    }
-    .nav .nav-text{
-        font-size: 15px;
-        text-shadow: -1px -1px white;
-    }
-    @media screen and (max-width:550px){
-          .nav{display: none;}
-          .text{
-            clear: left;
-          }
-    }
-    .nav ul > li:nth-child(4)::after{
-        width: 0;
-        height: 0;
-    }
-    .nav ul > li:nth-child(6)::after{
-        width: 0;
-        height: 0;
-    }
-    .nav ul > li:nth-child(10)::after{
-        width: 0;
-        height: 0;
-    }
-    .nav ul > li:nth-child(12)::after{
-        width: 0;
-        height: 0;
-    }
-    /*.no{
-        width: 150px;
-        height: 200px;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        box-shadow: 3px 3px 1px #F0F0F0;  
-    }*/
-    .content::before{
-        content: "";
-        display: block;
-        width: 400px;
-        height: 1px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        /*box-shadow: -2px -2px 2px #ccc;*/
-        background-image: linear-gradient(to right, rgba(0,0,0,0.1) 0%,rgba(255,255,255,1) 100%);
 
+
+}
+
+@media screen and (max-width: 510px) {
+    .page-aside,.page-icon,.page-content > h2:first-of-type {
+        display: none;
     }
-    .content::after{
-        content: "";
-        display: block;
-        width: 400px;
-        height: 1px;
-        position: absolute;
-        z-index: -1;
-        right: 0;
-        bottom: 0;
-        /*box-shadow: 3px 2px 2px #ccc;*/
-        background-image: linear-gradient(to left, rgba(0,0,0,0.1) 0%,rgba(255,255,255,1) 100%);
+
+    .page-content {
+        margin: 8px 10px 12px 10px;
     }
-    .text-one{
-        margin-top: 20px;
+
+    .page-content-description {
+        width: 100%;
+        height: 190px;
     }
-    .left-top-text{
-        position: absolute;
-        top: 2px;
-        left: 10px;
-        width: 30px;
-        border: 2px solid #a39d91;
-        color: #a39d9a;
-        padding: 3px;
-        text-align: center;
-        background-image: linear-gradient(to bottom,#eff2dd,#bfb9a5)
+}
+
+@media screen and (max-width: 360px) {
+    .page {
+        background: url("img/2.jpg") no-repeat left top/100% 200px,
+                    url("img/3.jpg") no-repeat right bottom/100% 200px;
     }
+}
+
+.page-aside ul > li:nth-child(4)::after，
+.page-aside ul > li:nth-child(6)::after，
+.page-aside ul > li:nth-child(10)::after，
+.page-aside ul > li:nth-child(12)::after {
+    width: 0;
+    height: 0;
+}
+    
+/*
+.page-content::before,
+.page-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.page-content::before {
+    width: 350px;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.1) 0%,rgba(255,255,255,1) 100%);
+}
+
+.page-content::after {
+    z-index: -1;
+    width: 1px;
+    height: 650px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(255,255,255,1) 100%);
+}*/
+
+
+
+.page-icon {
+    position: absolute;
+    top: 2px;
+    left: 10px;
+    width: 30px;
+    padding: 3px;
+    color: #a39d9a;
+    text-align: center;
+    border: 2px solid #a39d91;
+    background-image: linear-gradient(to bottom,#eff2dd,#bfb9a5)
+}
+
+.page-content h1 {
+    position: absolute;
+    top: 20px;
+    width: 200px;
+    height: 100px; 
+    text-indent: -9999px;
+    background: url("img/1.gif") no-repeat;
+    background-size: 200px 100px;
+}
+
+.page-content > h2:first-of-type {
+    position: absolute;
+    right: 0;
+    top: 55px;
+    width: 200px;
+    height: 70px;
+    text-indent: -9999px;
+    background: url("img/4.gif") no-repeat;
+    background-size: 200px 70px;
+}
+
+.page-content-main p {
+    margin-bottom: 20px;
+}
