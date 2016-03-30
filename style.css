@@ -1,14 +1,8 @@
-*{margin: 0;padding: 0;}
+body {
+    font-family:"Lucida Grande",Verdana,Lucida,Arial,Helvetica,"宋体",sans-serif;
 
-h2 {
-    font-family:"Times New Roman",Georgia,Serif,Arial,Verdana,Sans-serif;
-    font-style: italic;
-    color: #c1bb9c;
 }
 
-h2 {
-    font-size: 17px;
-    color: #7d775c;
 h3 {
     font-family:"Times New Roman",Georgia,Serif,Arial,Verdana,Sans-serif;
     font-style: italic;
@@ -63,7 +57,7 @@ a:hover, a:active {
 .page-content {
     position: relative;
     z-index: 2;
-    margin: 8px 144px 12px 100px;
+    margin: 8px 146px 12px 100px;
     padding:120px 20px 0px 20px;
     border-width: 1px;
     border-style: solid;
@@ -73,9 +67,9 @@ a:hover, a:active {
 
 .page-content-description {
     float: left;
-    width: 162px;
-    height: 244px;
-    margin: 16px 17px 20px 4px;
+    width: 167px;
+/*    height: 244px;*/
+    margin: 16px 17px 15px 4px;
     font-style: italic;
     font-size: 18px;
     text-align: center;
@@ -117,7 +111,7 @@ a:hover, a:active {
 .page-aside {
     position: absolute;
     right: 0;
-    width: 135px;
+    width: 137px;
     padding: 15px 0px 20px 5px; 
     margin-right: 4px;
     margin-top: 150px;
@@ -127,7 +121,7 @@ a:hover, a:active {
 .page-aside li {
     position: relative;
     padding: 7px 1px;
-    font-size: 10px; 
+    font-size: 12px; 
     color: #c2bb9a;
 }
 
@@ -146,7 +140,7 @@ a:hover, a:active {
     right: 7px;
     left: 7px;
     height: 1px;
-    background:linear-gradient(to right,transparent,#d7cfb7,#b6ceb6,#b6ceb6,#b6ceb6,#b6ceb6,#b6ceb6,#b6ceb6,#b6ceb6,#d7cfb7,transparent);
+    background:linear-gradient(to right,#e0dec7,#d7cfb7,#b6ceb6,#b6ceb6,#b6ceb6,#b6ceb6,#b6ceb6,#b6ceb6,#b6ceb6,#d7cfb7,#e0dec7);
     }
 
 .page-aside ul > li:last-child::after {
