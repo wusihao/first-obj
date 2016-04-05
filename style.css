@@ -9,6 +9,7 @@ h3 {
     font-size: 17px;
     color: #7d775c;
     letter-spacing: 1px;
+
 }
 
 p {
@@ -19,6 +20,10 @@ p {
 .page-content-article p {
     text-align: justify;
     line-height: 1.3em;
+}
+
+.page-content-article {
+    margin-top : 150px;
 }
 
 span {
@@ -58,20 +63,22 @@ a:hover, a:active {
     position: relative;
     z-index: 2;
     margin: 8px 146px 12px 100px;
-    padding:120px 20px 0px 20px;
-    border-width: 1px;
+    padding:20px 20px 0px 20px;
+   /* border-width: 1px;
     border-style: solid;
-    border-image: linear-gradient(125deg,#e0e0e0,transparent,transparent,transparent,transparent,#e0e0e0) 1 1 1 1;
+    border-image: linear-gradient(125deg,#e0e0e0,transparent,transparent,transparent,transparent,#e0e0e0) 1 1 1 1;*/
     background-color: rgba(255,255,255,.7);
 }
 
 .page-content-description {
     float: left;
     width: 167px;
-/*    height: 244px;*/
-    margin: 16px 17px 15px 4px;
+    margin: 7px 17px 0 10px;
+}
+
+.page-content-description p{
     font-style: italic;
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
     line-height: 1.5em;
 }
@@ -82,8 +89,8 @@ a:hover, a:active {
     text-align: center;
 }
 
-/*
-.page-content-footer::after，
+
+.page-content-footer::after,
 .page-content-footer::before {
     content: "";
     position: absolute;
@@ -101,7 +108,7 @@ a:hover, a:active {
     width: 450px;
     height: 1px;
     background-image: linear-gradient(to left, rgba(0,0,0,0.1) 0%,rgba(255,255,255,1) 100%);
-}*/
+}
 
 .page-content-footer ul li {
     display: inline;
@@ -109,8 +116,7 @@ a:hover, a:active {
 }
 
 .page-aside {
-    position: absolute;
-    right: 0;
+    float: right;
     width: 137px;
     padding: 15px 0px 20px 5px; 
     margin-right: 4px;
@@ -154,14 +160,9 @@ a:hover, a:active {
     text-shadow: -1px -1px white;
     }
 
-/*@media screen and (max-device-width:600px){
-    aside{display: none;}
-}*/
 
-@media screen and (max-width: 650px) {
-    .page-content-article {
-        clear: left;
-    }
+@media screen and (max-width: 670px) {
+
 
     .page {
         background: url("img/2.jpg") no-repeat left top/350px 250px,
@@ -173,36 +174,44 @@ a:hover, a:active {
     }
 
     .page-aside {
-        position: absolute;
-        right: 0;
-        top: 0;
+        position: relative;
         z-index: 10;
-        width: 200px;
-        height: 260px;
-        padding: 0;
+        width: 150px;
+        padding-bottom: 15px;
+        margin-left: 10px;
     }
 
     .page-aside li {
-        padding: 0;
-        margin: 0;
         text-align: center;
     }
 
+    /*.page-content header h2 {
+        margin-top: 0px;
+    }
+
+    .page-content-description {
+        margin-left: 180px;
+    }*/
 
 }
 
-@media screen and (max-width: 510px) {
-    .page-aside,.page-tag,.page-content header h2 {
+@media screen and (max-width: 583px) {
+    .page-aside,.page-tag {
         display: none;
+    }
+
+    .page input{
+        display: block;
     }
 
     .page-content {
         margin: 8px 10px 12px 10px;
+        
     }
 
     .page-content-description {
         width: 100%;
-        height: 190px;
+  
     }
 }
 
@@ -217,9 +226,10 @@ a:hover, a:active {
     }
 }
 
+@media screen and (max-width: 453px) {
 
-    
-/*
+}
+
 .page-content::before,
 .page-content::after {
     content: "";
@@ -239,9 +249,7 @@ a:hover, a:active {
     width: 1px;
     height: 650px;
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(255,255,255,1) 100%);
-}*/
-
-
+}
 
 .page-tag {
     position: absolute;
@@ -256,8 +264,7 @@ a:hover, a:active {
 }
 
 .page-content header h1 {
-    position: absolute;
-    top: 20px;
+    float: left;
     width: 200px;
     height: 100px; 
     text-indent: -9999px;
@@ -266,13 +273,19 @@ a:hover, a:active {
 }
 
 .page-content header h2{
-    position: absolute;
-    right: 0;
-    top: 55px;
+    float: right;
+
     width: 200px;
     height: 70px;
     text-indent: -9999px;
-    background: url("img/4.gif") no-repeat;
+    background: url("img/4.gif") no-repeat 0 0/200px 70px;
     background-size: 200px 70px;
 }
 
+input {
+    position: absolute;
+    z-index: 10;
+    right: 60px;
+    top: 120px;
+    display: none;
+}

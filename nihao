@@ -9,7 +9,7 @@
 
 <body>
 <div class="page" >
-
+    <!-- <input type="button" value="aside" onclick="hideshow()"></input> -->
     <aside class="page-aside">
         <ul>
             <li class="page-aside-title">Design:</li>
@@ -34,20 +34,22 @@
             <li class="page-aside-title">Resource:</li>
             <li><a href="#">View This Design’s <abbr title="Cascading Style Sheets">CSS</abbr>  </a></li> 
         </ul>
+        
     </aside>
 
     <div class="page-content" role="main">
         <header role="banner">
             <h1>Zen garden</h1>
             <h2>Beauty Of CSS Design</h2>  
+        </header>
+
+        <article class="page-content-article">
             <div class="page-content-description" role="presentation">
                 <p>A demonstration of what can be accomplished </p>
                 <p>through CSS-based design. Select any style sheet from the list to load it into this page.</p>
                 <p>Download the example <a href="#">html file</a> and <a href="#">css file</a></p>
-            </div>  
-        </header>
+            </div> 
 
-        <article class="page-content-article">
             <h3>The Road to Enlightenment</h3>
             <p>Littering a dark and dreary road lay the past relics of browser-specific tags, incompatible DOMs, broken CSS support, and abandoned browsers.</p>
             
@@ -96,5 +98,13 @@
         元完全杂技
     </div>
 </div>
+// <script type="text/javascript">
+//     function hideshow(){
+//         var char = document.getElementsByTagName("aside");
+//         if (char.display=="none") {
+//         char.style.display="block";}
+//         else{char.style.display="none"}
+//     }
+</script>
 </body>
 </html>
